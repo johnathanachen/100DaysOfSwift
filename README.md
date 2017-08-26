@@ -6,12 +6,10 @@
 - Use NSNumberFormatter
 - Unwrapping Optionals
 - Build custom Navigation Bar
-
-### Project 2 - Tap or Hold Counter
 - Use and detect Long Press Gestures
 - Work with multiple actions on one button
 
-### Project 3 - Custom Settings
+### Project 2 - Custom Settings
 - Work with Gestures
 - Create Custom Navigation Bars
 - Customize the way Back Buttons are displayed
