@@ -10,16 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-  override func viewDidLoad() {
+    // MARK: - View Did Load
+    override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-  }
 
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-  }
+    }
 
+    // MARK: Outlets
+    @IBOutlet var countLabel: UILabel!
 
+    // MARK: - Properties
+    var count = 0
+
+    // MARK: - Interactions
+    @IBAction func tapCounter(_ sender: UIButton) {
+    count = count + 1
+    countLabel.text = String(count)
+    }
+
+    @IBAction func tapResetButton(_ sender: UIBarButtonItem) {
+    print("Reset button tapped")
+    }
+  
 }
 
