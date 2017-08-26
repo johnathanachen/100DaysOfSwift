@@ -22,20 +22,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7YX-aK-3Lh">
-                                <rect key="frame" x="163.5" y="257" width="48" height="153.5"/>
+                                <rect key="frame" x="111" y="257" width="153" height="153.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttu-e9-kfm">
-                                        <rect key="frame" x="0.0" y="0.0" width="48" height="95.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ttu-e9-kfm">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="95.5"/>
                                         <fontDescription key="fontDescription" type="system" weight="thin" pointSize="80"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X1z-3C-BN2">
-                                        <rect key="frame" x="0.0" y="105.5" width="48" height="48"/>
+                                        <rect key="frame" x="0.0" y="105.5" width="153" height="48"/>
+                                        <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="Tap"/>
+                                        <state key="normal" title="Tap or Hold"/>
                                         <connections>
-                                            <action selector="tapCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sH4-aT-rq4"/>
+                                            <action selector="pressButtonDragInside:" destination="BYZ-38-t0r" eventType="touchDragInside" id="ArY-6L-Szh"/>
+                                            <action selector="tapCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xOV-jV-vds"/>
+                                            <action selector="touchButtonDragOutside:" destination="BYZ-38-t0r" eventType="touchDragOutside" id="1vH-9s-k92"/>
+                                            <action selector="touchButtonOutside:" destination="BYZ-38-t0r" eventType="touchUpOutside" id="T4Z-8n-X9X"/>
+                                            <outletCollection property="gestureRecognizers" destination="5t3-dc-hgk" appends="YES" id="fEf-yP-Aho"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -59,6 +64,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="5t3-dc-hgk">
+                    <connections>
+                        <action selector="longPressTapButton:" destination="BYZ-38-t0r" id="PKm-gT-ZMh"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1056.8" y="122.78860569715144"/>
         </scene>
