@@ -24,12 +24,13 @@ class ViewController: UIViewController {
 
     // MARK: - Interactions
     @IBAction func tapCounter(_ sender: UIButton) {
-    count = count + 1
-    countLabel.text = String(count)
+        count = count + 1
+        countLabel.text = String(count)
     }
 
     @IBAction func tapResetButton(_ sender: UIBarButtonItem) {
-    print("Reset button tapped")
+        countLabel.text = "0"
+        count = 0 
     }
   
 }
