@@ -36,6 +36,9 @@
                                         <rect key="frame" x="0.0" y="74" width="172" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Refresh"/>
+                                        <connections>
+                                            <action selector="tapRefreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWY-Sm-3wd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -47,6 +50,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="wAL-ya-bIp" id="Ye2-6s-Yaf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
