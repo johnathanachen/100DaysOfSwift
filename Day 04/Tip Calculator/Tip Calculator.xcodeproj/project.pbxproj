@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B82DCC6D1F54891C00652CC1 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B82DCC6C1F54891C00652CC1 /* Model.swift */; };
 		B88F99AF1F5251F300AC3F8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F99AE1F5251F300AC3F8D /* AppDelegate.swift */; };
 		B88F99B11F5251F300AC3F8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88F99B01F5251F300AC3F8D /* ViewController.swift */; };
 		B88F99B41F5251F300AC3F8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88F99B21F5251F300AC3F8D /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B82DCC6C1F54891C00652CC1 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B88F99AB1F5251F300AC3F8D /* Tip Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tip Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B88F99AE1F5251F300AC3F8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B88F99B01F5251F300AC3F8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				B88F99AE1F5251F300AC3F8D /* AppDelegate.swift */,
 				B88F99B01F5251F300AC3F8D /* ViewController.swift */,
+				B82DCC6C1F54891C00652CC1 /* Model.swift */,
 				B88F99B21F5251F300AC3F8D /* Main.storyboard */,
 				B88F99B51F5251F300AC3F8D /* Assets.xcassets */,
 				B88F99B71F5251F300AC3F8D /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B82DCC6D1F54891C00652CC1 /* Model.swift in Sources */,
 				B88F99B11F5251F300AC3F8D /* ViewController.swift in Sources */,
 				B88F99AF1F5251F300AC3F8D /* AppDelegate.swift in Sources */,
 			);
@@ -304,6 +308,7 @@
 				B88F99BF1F5251F300AC3F8D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
