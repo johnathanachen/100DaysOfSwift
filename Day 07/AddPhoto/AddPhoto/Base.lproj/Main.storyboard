@@ -46,8 +46,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Poto" id="sLG-R3-VcF">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="cBQ-Mf-0s2"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="cBQ-Mf-0s2">
+                            <connections>
+                                <action selector="tapCameraButton:" destination="BYZ-38-t0r" id="hti-Zo-qNF"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="mDd-WI-J2K" id="tMp-fZ-FD3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
