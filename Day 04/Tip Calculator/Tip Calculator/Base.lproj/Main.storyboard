@@ -83,7 +83,10 @@
                     </view>
                     <connections>
                         <outlet property="subtotalTextField" destination="s0o-bC-Jr2" id="Kfk-sX-tKq"/>
+                        <outlet property="tipAmountLabel" destination="hKt-b2-2Vd" id="gYT-n6-MsH"/>
                         <outlet property="tipPercentLabel" destination="3SR-mo-JeK" id="7hw-g1-lnT"/>
+                        <outlet property="tipPercentSlider" destination="nGe-t3-4fP" id="2X8-hm-5b5"/>
+                        <outlet property="totalAmountLabel" destination="HSZ-aw-vYR" id="ROc-u3-TDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
