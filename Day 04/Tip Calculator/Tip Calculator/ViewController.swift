@@ -19,6 +19,15 @@ class ViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var subtotalTextField: UITextField!
+    @IBOutlet weak var tipPercentLabel: UILabel!
+    
+    // MARK: - Interactions
+    @IBAction func dragSlider(_ sender: UISlider) {
+        tipPercentLabel.text = "Tip (\(Int(sender.value))%):"
+        
+        
+        print("\(Int(sender.value))")
+    }
     
     // MARK: - Functions
     func createToolbar() {
