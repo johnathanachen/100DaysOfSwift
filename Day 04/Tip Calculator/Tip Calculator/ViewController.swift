@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var subtotalTextField: UITextField!
     @IBOutlet weak var tipPercentLabel: UILabel!
     
+    // MARK: - Properties
+    let model = Model()
+    
     // MARK: - Interactions
     @IBAction func dragSlider(_ sender: UISlider) {
         tipPercentLabel.text = "Tip (\(Int(sender.value))%):"
@@ -62,6 +65,14 @@ class ViewController: UIViewController {
     
     func dismissKeyboard() {
         subtotalTextField.resignFirstResponder()
+        
+        if subtotalTextField.text?.characters.count == 0 {
+            subtotalTextField.text = "$0.00"
+        } else {
+            model.subtotalFromTextField = subtotalTextField.text!
+            subtotalTextField.text = model.subtotalAsCurrency
+        }
+       
     }
 }
 
