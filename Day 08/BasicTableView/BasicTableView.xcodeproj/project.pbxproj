@@ -12,6 +12,7 @@
 		B88D39011F5D0C74001717B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B88D39001F5D0C74001717B6 /* Assets.xcassets */; };
 		B88D39041F5D0C74001717B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88D39021F5D0C74001717B6 /* LaunchScreen.storyboard */; };
 		B88D390C1F5D0D0B001717B6 /* GroceriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */; };
+		B88D390E1F5DD6A0001717B6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D390D1F5DD6A0001717B6 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B88D39031F5D0C74001717B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B88D39051F5D0C74001717B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesTableViewController.swift; sourceTree = "<group>"; };
+		B88D390D1F5DD6A0001717B6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				B88D38F91F5D0C74001717B6 /* AppDelegate.swift */,
 				B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */,
+				B88D390D1F5DD6A0001717B6 /* Model.swift */,
 				B88D38FD1F5D0C74001717B6 /* Main.storyboard */,
 				B88D39001F5D0C74001717B6 /* Assets.xcassets */,
 				B88D39021F5D0C74001717B6 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B88D390E1F5DD6A0001717B6 /* Model.swift in Sources */,
 				B88D38FA1F5D0C74001717B6 /* AppDelegate.swift in Sources */,
 				B88D390C1F5D0D0B001717B6 /* GroceriesTableViewController.swift in Sources */,
 			);
@@ -316,6 +320,7 @@
 				B88D390A1F5D0C74001717B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
