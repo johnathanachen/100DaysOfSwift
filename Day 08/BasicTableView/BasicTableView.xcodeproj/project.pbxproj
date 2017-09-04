@@ -13,6 +13,7 @@
 		B88D39041F5D0C74001717B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B88D39021F5D0C74001717B6 /* LaunchScreen.storyboard */; };
 		B88D390C1F5D0D0B001717B6 /* GroceriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */; };
 		B88D390E1F5DD6A0001717B6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D390D1F5DD6A0001717B6 /* Model.swift */; };
+		B88D39141F5DDB27001717B6 /* NewGroceryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88D39131F5DDB27001717B6 /* NewGroceryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B88D39051F5D0C74001717B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesTableViewController.swift; sourceTree = "<group>"; };
 		B88D390D1F5DD6A0001717B6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		B88D39131F5DDB27001717B6 /* NewGroceryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGroceryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				B88D38F91F5D0C74001717B6 /* AppDelegate.swift */,
 				B88D390B1F5D0D0B001717B6 /* GroceriesTableViewController.swift */,
+				B88D39131F5DDB27001717B6 /* NewGroceryViewController.swift */,
 				B88D390D1F5DD6A0001717B6 /* Model.swift */,
 				B88D38FD1F5D0C74001717B6 /* Main.storyboard */,
 				B88D39001F5D0C74001717B6 /* Assets.xcassets */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B88D390E1F5DD6A0001717B6 /* Model.swift in Sources */,
+				B88D39141F5DDB27001717B6 /* NewGroceryViewController.swift in Sources */,
 				B88D38FA1F5D0C74001717B6 /* AppDelegate.swift in Sources */,
 				B88D390C1F5D0D0B001717B6 /* GroceriesTableViewController.swift in Sources */,
 			);
