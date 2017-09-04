@@ -78,8 +78,15 @@
                         <viewLayoutGuide key="safeArea" id="nEF-kU-Zf0"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Grocery" id="Wb6-PJ-Bgf">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="n0r-WD-xjX"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="n0r-WD-xjX">
+                            <connections>
+                                <action selector="tapDoneButton:" destination="ARX-G9-nSg" id="rZQ-JN-VTS"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textView" destination="tG2-fH-PKs" id="tAY-g7-94B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k3a-BR-kn6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

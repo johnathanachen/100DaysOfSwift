@@ -8,6 +8,8 @@
 
 import Foundation
 
+let model = Model()
+
 class Model {
     var data = ["Milk", "Apples", "Ham", "Eggs"]
     var cloudData = ["Pancakes", "Orange Juice", "Milk", "Apples", "Ham", "Waffles", "Eggs"]

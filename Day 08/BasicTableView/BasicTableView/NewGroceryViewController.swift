@@ -10,15 +10,23 @@ import UIKit
 
 class NewGroceryViewController: UIViewController {
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        textView.becomeFirstResponder()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Outlets
+    @IBOutlet weak var textView: UITextView!
+    
+    // MARK: - Interactions
+    @IBAction func tapDoneButton(_ sender: UIBarButtonItem) {
+        
+        if textView.text.characters.count > 0 {
+            model.data.append(textView.text)
+        }
+
+        let _ =  navigationController?.popToRootViewController(animated: true)
     }
     
 
