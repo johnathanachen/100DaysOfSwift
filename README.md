@@ -15,3 +15,14 @@
 - Customize the way Back Buttons are displayed
 - Auto-launch the Keyboard when the View loads
 
+### Project 3 - Tip Calculator
+- MVC Design
+- Build Toolbar using UIBarButtonItem
+- Use Textfield Delegate
+- Convert numbers with NumberFormatter
+
+### Project 4 - Get Date and Time
+
+### Project 5 - Passing Data to Another View
+
+### Project 6 - Accessing Camera Roll and Adding Photo
