@@ -8,6 +8,8 @@
 
 import Foundation
 
+let model = Model()
+
 class Model {
     let places = [
         "A": ["Angkor Wat, Cambodia", "Aogashima Volcano, Japan"],
