@@ -33,7 +33,7 @@
 
 ### Project 8 - Stick Headers and Jumpbar
 ### Project 9 - Basic Table View
-### Project 10 - Dynamic Data for Each Cell (Contact Cards)
+### Project 10 - Contact Profiles
 ### Project 11 - Photo Timeline 
 - Core Data
 - Buttons Above Keyboard
