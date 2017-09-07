@@ -47,7 +47,18 @@ class PlacesTableViewController: UITableViewController {
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let letter = alphabetArray[section]
+        
+        switch section {
+        case 0...14: return letter
+        default: return letter
+        }
+    }
 
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        return alphabetArray
+    }
 }
 
 
