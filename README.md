@@ -26,3 +26,18 @@
 ### Project 5 - Passing Data to Another View
 
 ### Project 6 - Accessing Camera Roll and Adding Photo
+
+
+### Project 7 - Table View and and delete Items (Todo List)
+- Pull down to Refresh
+
+### Project 8 - Stick Headers and Jumpbar
+### Project 9 - Dynamic Data for Each Cell (Contact Cards)
+### Project 10 - Photo Timeline 
+- Core Data
+- Buttons Above Keyboard
+### Project 11 - Date and Time Picker 
+### Project 12 - Photo Collection 
+### Project 13 - Nike Ecommerce Store
+### Project 14 - Instagram
+### Project 15 - Facebook Newsfeed
