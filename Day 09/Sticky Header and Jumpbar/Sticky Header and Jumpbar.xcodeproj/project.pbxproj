@@ -12,6 +12,7 @@
 		B81570231F5FC32A0078FB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B81570221F5FC32A0078FB16 /* Assets.xcassets */; };
 		B81570261F5FC32A0078FB16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B81570241F5FC32A0078FB16 /* LaunchScreen.storyboard */; };
 		B81CDF101F60F20F00991236 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81CDF0F1F60F20F00991236 /* PlacesTableViewController.swift */; };
+		B81CDF121F60F2AB00991236 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81CDF111F60F2AB00991236 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		B81570251F5FC32A0078FB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B81570271F5FC32A0078FB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B81CDF0F1F60F20F00991236 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		B81CDF111F60F2AB00991236 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				B815701B1F5FC32A0078FB16 /* AppDelegate.swift */,
 				B81CDF0F1F60F20F00991236 /* PlacesTableViewController.swift */,
+				B81CDF111F60F2AB00991236 /* Model.swift */,
 				B815701F1F5FC32A0078FB16 /* Main.storyboard */,
 				B81570221F5FC32A0078FB16 /* Assets.xcassets */,
 				B81570241F5FC32A0078FB16 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B81CDF121F60F2AB00991236 /* Model.swift in Sources */,
 				B815701C1F5FC32A0078FB16 /* AppDelegate.swift in Sources */,
 				B81CDF101F60F20F00991236 /* PlacesTableViewController.swift in Sources */,
 			);
