@@ -14,13 +14,14 @@
         <scene sceneID="OW2-u8-woX">
             <objects>
                 <tableViewController id="2bz-fH-zLw" customClass="ContactsTableViewController" customModule="Contact_Profiles" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="43d-Uh-CIJ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="56" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" id="43d-Uh-CIJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <inset key="separatorInset" minX="73" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="headerCell" id="D6k-oD-UCi" customClass="HeaderTableViewCell" customModule="Contact_Profiles" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="56"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D6k-oD-UCi" id="XEX-Mi-7qI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
@@ -40,9 +41,12 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="XLf-nc-p7o" secondAttribute="trailing" id="oHS-77-oZc"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerLabel" destination="XLf-nc-p7o" id="CpL-jH-gaJ"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" rowHeight="70" id="7nU-Bt-Y8t" customClass="PersonTableViewCell" customModule="Contact_Profiles" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="84" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="111.5" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7nU-Bt-Y8t" id="Fnb-v2-2sO">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
@@ -52,7 +56,7 @@
                                             <rect key="frame" x="18" y="8" width="349" height="53.5"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V2g-3b-x4r">
-                                                    <rect key="frame" x="0.0" y="0.0" width="68" height="53.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="68.5" height="53.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="OvK-X7-oTZ"/>
                                                         <constraint firstAttribute="width" secondItem="V2g-3b-x4r" secondAttribute="height" multiplier="50:39" id="XrV-bi-Rwa"/>
@@ -60,7 +64,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="firstName lastName" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZj-vs-WYi">
-                                                    <rect key="frame" x="78" y="0.0" width="251.5" height="53.5"/>
+                                                    <rect key="frame" x="78.5" y="0.0" width="251" height="53.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,6 +88,8 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="nameLabel" destination="XZj-vs-WYi" id="AiX-Io-t0i"/>
+                                    <outlet property="profileImageView" destination="V2g-3b-x4r" id="uVu-BJ-aPq"/>
                                     <segue destination="bl5-dp-SE2" kind="show" id="7tX-WQ-VVN"/>
                                 </connections>
                             </tableViewCell>
@@ -211,6 +217,13 @@
                                         <constraint firstAttribute="trailingMargin" secondItem="NhB-Ly-a7U" secondAttribute="trailing" constant="8" id="TqM-PD-VkB"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="emailLabel" destination="vJ6-F4-F0g" id="Dm4-GL-UYU"/>
+                                    <outlet property="nameLabel" destination="dXb-s7-FR3" id="QvM-lh-MQE"/>
+                                    <outlet property="notesLabel" destination="ExA-aV-aZZ" id="kQl-mt-Cvl"/>
+                                    <outlet property="numberLabel" destination="ssM-dW-R22" id="yhe-vc-3bp"/>
+                                    <outlet property="profileImageView" destination="hqX-Y7-iPH" id="YnU-WQ-BaQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

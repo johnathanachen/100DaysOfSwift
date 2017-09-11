@@ -10,15 +10,19 @@ import UIKit
 
 class InfoCardTableViewCell: UITableViewCell {
 
+    // MARK: - When Cell Loads
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
+    
+    // MARK: - Outlets
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var notesLabel: UILabel!
+    
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
 
 }
