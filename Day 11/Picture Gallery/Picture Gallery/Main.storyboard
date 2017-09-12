@@ -13,7 +13,7 @@
         <!--New Entry-->
         <scene sceneID="ptS-Ei-2YI">
             <objects>
-                <viewController id="9Gd-X9-gGO" sceneMemberID="viewController">
+                <viewController id="9Gd-X9-gGO" customClass="LocationPhotoViewController" customModule="Picture_Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="cqE-ZC-472">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-CH-UWX">
-                                        <rect key="frame" x="0.0" y="10" width="375" height="593"/>
+                                        <rect key="frame" x="7" y="10" width="375" height="593"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Janurary 17, 2017 at 10:07 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DX-yV-1rb">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="16"/>
@@ -45,9 +45,9 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="dVB-CH-UWX" firstAttribute="centerX" secondItem="Kxg-aa-AkH" secondAttribute="centerX" id="Rhl-Su-xQr"/>
-                                    <constraint firstAttribute="trailing" secondItem="dVB-CH-UWX" secondAttribute="trailing" id="ax4-Ca-Rg9"/>
+                                    <constraint firstAttribute="trailing" secondItem="dVB-CH-UWX" secondAttribute="trailing" constant="7" id="ax4-Ca-Rg9"/>
                                     <constraint firstAttribute="bottom" secondItem="dVB-CH-UWX" secondAttribute="bottom" id="kWf-Ep-0PT"/>
-                                    <constraint firstItem="dVB-CH-UWX" firstAttribute="leading" secondItem="Kxg-aa-AkH" secondAttribute="leading" id="wC0-Xg-TNc"/>
+                                    <constraint firstItem="dVB-CH-UWX" firstAttribute="leading" secondItem="Kxg-aa-AkH" secondAttribute="leading" constant="7" id="wC0-Xg-TNc"/>
                                     <constraint firstItem="dVB-CH-UWX" firstAttribute="top" secondItem="Kxg-aa-AkH" secondAttribute="top" constant="10" id="yle-Ny-bCp"/>
                                 </constraints>
                             </scrollView>
@@ -62,8 +62,19 @@
                         <viewLayoutGuide key="safeArea" id="4P7-PE-BpV"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Entry" id="65m-To-AfL">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="R2a-Ty-bDy"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="R2a-Ty-bDy">
+                            <connections>
+                                <action selector="tapDoneButton:" destination="9Gd-X9-gGO" id="C62-F9-aaz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="3DX-yV-1rb" id="D7Q-Td-vns"/>
+                        <outlet property="locationLabel" destination="ldP-j1-3Ot" id="F3g-Lo-Wyj"/>
+                        <outlet property="selectedImageView" destination="QBN-Ed-lFV" id="wDz-tU-0J5"/>
+                        <outlet property="textView" destination="od7-cM-C0h" id="A6d-me-deG"/>
+                        <outlet property="toolbar" destination="x5R-FH-9c5" id="v4C-Ib-xZD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mSq-BB-XVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="x5R-FH-9c5">
@@ -73,13 +84,16 @@
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ybq-kP-dwU">
                             <rect key="frame" x="16" y="14" width="25" height="22"/>
                             <state key="normal" image="camera"/>
+                            <connections>
+                                <action selector="tapCameraButton:" destination="9Gd-X9-gGO" eventType="touchUpInside" id="8m3-uE-Tyo"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDK-sh-Hpv">
                             <rect key="frame" x="73" y="14" width="19" height="22"/>
                             <state key="normal" image="location"/>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldP-j1-3Ot">
-                            <rect key="frame" x="280.5" y="18" width="38" height="18"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ldP-j1-3Ot">
+                            <rect key="frame" x="318.5" y="36" width="0.0" height="0.0"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>

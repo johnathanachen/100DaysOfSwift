@@ -14,6 +14,7 @@
 		B809BA951F67662100B7F4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B809BA941F67662100B7F4EB /* Assets.xcassets */; };
 		B809BA981F67662100B7F4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B809BA961F67662100B7F4EB /* LaunchScreen.storyboard */; };
 		B809BAA11F677F2400B7F4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B809BAA01F677F2400B7F4EB /* Main.storyboard */; };
+		B809BAA31F67849B00B7F4EB /* LocationPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B809BA971F67662100B7F4EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B809BA991F67662100B7F4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B809BAA01F677F2400B7F4EB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				B809BA8A1F67662100B7F4EB /* AppDelegate.swift */,
+				B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */,
 				B809BAA01F677F2400B7F4EB /* Main.storyboard */,
 				B809BA941F67662100B7F4EB /* Assets.xcassets */,
 				B809BA961F67662100B7F4EB /* LaunchScreen.storyboard */,
@@ -152,6 +155,7 @@
 			files = (
 				B809BA8D1F67662100B7F4EB /* ViewController.swift in Sources */,
 				B809BA931F67662100B7F4EB /* Picture_Gallery.xcdatamodeld in Sources */,
+				B809BAA31F67849B00B7F4EB /* LocationPhotoViewController.swift in Sources */,
 				B809BA8B1F67662100B7F4EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
