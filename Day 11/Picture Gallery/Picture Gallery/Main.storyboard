@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e0H-gJ-icJ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New Entry-->
+        <scene sceneID="ptS-Ei-2YI">
+            <objects>
+                <viewController id="9Gd-X9-gGO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="cqE-ZC-472">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kxg-aa-AkH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dVB-CH-UWX">
+                                        <rect key="frame" x="0.0" y="10" width="375" height="593"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Janurary 17, 2017 at 10:07 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DX-yV-1rb">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="od7-cM-C0h">
+                                                <rect key="frame" x="0.0" y="16" width="375" height="577"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="593" id="j2K-v3-1yG"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="dVB-CH-UWX" firstAttribute="centerX" secondItem="Kxg-aa-AkH" secondAttribute="centerX" id="Rhl-Su-xQr"/>
+                                    <constraint firstAttribute="trailing" secondItem="dVB-CH-UWX" secondAttribute="trailing" id="ax4-Ca-Rg9"/>
+                                    <constraint firstAttribute="bottom" secondItem="dVB-CH-UWX" secondAttribute="bottom" id="kWf-Ep-0PT"/>
+                                    <constraint firstItem="dVB-CH-UWX" firstAttribute="leading" secondItem="Kxg-aa-AkH" secondAttribute="leading" id="wC0-Xg-TNc"/>
+                                    <constraint firstItem="dVB-CH-UWX" firstAttribute="top" secondItem="Kxg-aa-AkH" secondAttribute="top" constant="10" id="yle-Ny-bCp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Kxg-aa-AkH" firstAttribute="top" secondItem="4P7-PE-BpV" secondAttribute="top" id="4LH-nP-uqg"/>
+                            <constraint firstItem="4P7-PE-BpV" firstAttribute="trailing" secondItem="Kxg-aa-AkH" secondAttribute="trailing" id="dMW-fe-qIh"/>
+                            <constraint firstItem="4P7-PE-BpV" firstAttribute="bottom" secondItem="Kxg-aa-AkH" secondAttribute="bottom" id="iLV-QI-qoX"/>
+                            <constraint firstItem="Kxg-aa-AkH" firstAttribute="leading" secondItem="4P7-PE-BpV" secondAttribute="leading" id="t38-H0-LO3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4P7-PE-BpV"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Entry" id="65m-To-AfL">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="R2a-Ty-bDy"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSq-BB-XVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="544.79999999999995" y="-224.4377811094453"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YUX-qg-tOV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e0H-gJ-icJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="uuA-kX-pq8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.090999999999999998" green="0.69999999999999996" blue="0.54774999999999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.94079999999999997" green="0.97999999999999998" blue="0.96823999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9Gd-X9-gGO" kind="relationship" relationship="rootViewController" id="9Ru-5e-ChM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bCP-cI-QAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-233" y="-224"/>
+        </scene>
+    </scenes>
+</document>
