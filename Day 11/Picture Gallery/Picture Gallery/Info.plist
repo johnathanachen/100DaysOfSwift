@@ -43,5 +43,7 @@
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app uses your location to tell you where you are on Earth.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Only uses selected photos in app</string>
 </dict>
 </plist>

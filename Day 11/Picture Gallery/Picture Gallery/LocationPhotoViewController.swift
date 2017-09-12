@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationPhotoViewController: UIViewController {
+class LocationPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,21 @@ class LocationPhotoViewController: UIViewController {
     @IBAction func tapDoneButton(_ sender: UIBarButtonItem) {
     }
     @IBAction func tapCameraButton(_ sender: UIButton) {
+        launchCameraRoll()
+    }
+    
+    // MARK: - Camera Roll
+    func launchCameraRoll() {
+        let imagePicker = UIImagePickerController()
+        present(imagePicker, animated: true, completion: nil)
+        imagePicker.delegate = self
+    }
+    
+    // MARK: UIImagePickerControllerDelegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        selectedImageView.image = info[UIImagePickerControllerOriginalImage] as! UIImage?
+        dismiss(animated: true, completion: nil)
+        textView.becomeFirstResponder()
     }
     
 
