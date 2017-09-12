@@ -52,6 +52,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 
                 self.locationLabel.text = location
                 self.locationLabel.textColor = .black
+            } else {
+                print("Error: \(error?.localizedDescription)")
             }
         }
     }
