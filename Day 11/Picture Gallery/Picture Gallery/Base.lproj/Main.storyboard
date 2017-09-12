@@ -31,6 +31,9 @@
                                         <state key="normal" title="Set Location">
                                             <color key="titleColor" red="0.3267581463" green="0.60143750910000005" blue="0.99324899909999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="tapSetLocationButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oQr-Vi-N1q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -42,6 +45,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="locationLabel" destination="Uab-Kv-gsx" id="lcD-BS-2a9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
