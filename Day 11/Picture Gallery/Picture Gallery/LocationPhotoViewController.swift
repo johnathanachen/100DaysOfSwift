@@ -16,6 +16,7 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
         textView.inputAccessoryView = toolbar
         textView.becomeFirstResponder()
         locationManager.delegate = self
+        loadCurrentDateAndTime()
     }
 
     // MARK: - Outlets
@@ -81,6 +82,13 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
         }
     }
     
+    // MARK: - Date and Time
+    func loadCurrentDateAndTime() {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM d, YYYY 'at' h:mm a"
+        
+        dateLabel.text = dateFormatter.string(from: Date())
+    }
 
 
 }
