@@ -62,9 +62,12 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
             
             // save to Core Data
             appDelegate.saveContext()
-            
         }
         
+        // Core Data Path
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        print("Core Data Path:\n \(path)")
+
     }
     
     // MARK: - Camera Roll
