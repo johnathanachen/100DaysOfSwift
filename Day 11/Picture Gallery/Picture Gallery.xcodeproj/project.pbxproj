@@ -15,6 +15,10 @@
 		B809BA981F67662100B7F4EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B809BA961F67662100B7F4EB /* LaunchScreen.storyboard */; };
 		B809BAA11F677F2400B7F4EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B809BAA01F677F2400B7F4EB /* Main.storyboard */; };
 		B809BAA31F67849B00B7F4EB /* LocationPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */; };
+		B80CB1DD1F6F14CD00301F97 /* Entries+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CB1DB1F6F14CD00301F97 /* Entries+CoreDataClass.swift */; };
+		B80CB1DE1F6F14CD00301F97 /* Entries+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B80CB1DC1F6F14CD00301F97 /* Entries+CoreDataProperties.swift */; };
+		B861E96F1F6F11CF0020A109 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861E96E1F6F11CF0020A109 /* TimelineTableViewController.swift */; };
+		B861E9711F6F12310020A109 /* TimelineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B861E9701F6F12310020A109 /* TimelineTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		B809BA991F67662100B7F4EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B809BAA01F677F2400B7F4EB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPhotoViewController.swift; sourceTree = "<group>"; };
+		B80CB1DB1F6F14CD00301F97 /* Entries+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entries+CoreDataClass.swift"; sourceTree = "<group>"; };
+		B80CB1DC1F6F14CD00301F97 /* Entries+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entries+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B861E96E1F6F11CF0020A109 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
+		B861E9701F6F12310020A109 /* TimelineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +70,13 @@
 			children = (
 				B809BA8A1F67662100B7F4EB /* AppDelegate.swift */,
 				B809BAA21F67849B00B7F4EB /* LocationPhotoViewController.swift */,
+				B861E96E1F6F11CF0020A109 /* TimelineTableViewController.swift */,
+				B861E9701F6F12310020A109 /* TimelineTableViewCell.swift */,
 				B809BAA01F677F2400B7F4EB /* Main.storyboard */,
 				B809BA941F67662100B7F4EB /* Assets.xcassets */,
 				B809BA961F67662100B7F4EB /* LaunchScreen.storyboard */,
 				B809BA991F67662100B7F4EB /* Info.plist */,
-				B809BA911F67662100B7F4EB /* Picture_Gallery.xcdatamodeld */,
+				B80CB1DF1F6F14E100301F97 /* Model */,
 				B809BA9F1F677EF600B7F4EB /* Set Location */,
 			);
 			path = "Picture Gallery";
@@ -79,6 +89,16 @@
 				B809BA8E1F67662100B7F4EB /* Main.storyboard */,
 			);
 			path = "Set Location";
+			sourceTree = "<group>";
+		};
+		B80CB1DF1F6F14E100301F97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B80CB1DB1F6F14CD00301F97 /* Entries+CoreDataClass.swift */,
+				B80CB1DC1F6F14CD00301F97 /* Entries+CoreDataProperties.swift */,
+				B809BA911F67662100B7F4EB /* Picture_Gallery.xcdatamodeld */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B80CB1DE1F6F14CD00301F97 /* Entries+CoreDataProperties.swift in Sources */,
 				B809BA8D1F67662100B7F4EB /* ViewController.swift in Sources */,
 				B809BA931F67662100B7F4EB /* Picture_Gallery.xcdatamodeld in Sources */,
+				B861E96F1F6F11CF0020A109 /* TimelineTableViewController.swift in Sources */,
 				B809BAA31F67849B00B7F4EB /* LocationPhotoViewController.swift in Sources */,
+				B861E9711F6F12310020A109 /* TimelineTableViewCell.swift in Sources */,
+				B80CB1DD1F6F14CD00301F97 /* Entries+CoreDataClass.swift in Sources */,
 				B809BA8B1F67662100B7F4EB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

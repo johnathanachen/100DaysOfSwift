@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class LocationPhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate {
 
@@ -28,12 +29,42 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
     
     // MARK: - Interactions
     @IBAction func tapDoneButton(_ sender: UIBarButtonItem) {
+        saveEntry()
     }
     @IBAction func tapCameraButton(_ sender: UIButton) {
         launchCameraRoll()
     }
     @IBAction func tapLocationButton(_ sender: UIButton) {
         getLocation()
+    }
+    
+    // MARK: - Core Data
+    func saveEntry() {
+        
+        if textView.text.characters.count > 0 {
+            
+            // lets us access core data
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let context = appDelegate.persistentContainer.viewContext
+            let entries = NSEntityDescription.insertNewObject(forEntityName: "Entries", into: context) as! Entries
+            
+            // pass values to core data
+            entries.entry = textView.text
+            entries.date = currentDate as NSDate?
+            
+            if let locationText = locationLabel.text {
+                entries.location = locationText
+            }
+            
+            if let selectedImage = selectedImageView.image {
+                entries.image = UIImageJPEGRepresentation(selectedImage, 0.75) as NSData?
+            }
+            
+            // save to Core Data
+            appDelegate.saveContext()
+            
+        }
+        
     }
     
     // MARK: - Camera Roll
@@ -83,11 +114,14 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
     }
     
     // MARK: - Date and Time
+    var currentDate: Date?
     func loadCurrentDateAndTime() {
+        currentDate = Date()
+        
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM d, YYYY 'at' h:mm a"
         
-        dateLabel.text = dateFormatter.string(from: Date())
+        dateLabel.text = dateFormatter.string(from: currentDate!)
     }
 
 
