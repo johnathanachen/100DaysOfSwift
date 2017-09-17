@@ -64,9 +64,11 @@ class LocationPhotoViewController: UIViewController, UIImagePickerControllerDele
             appDelegate.saveContext()
         }
         
+        let _ = navigationController?.popToRootViewController(animated: true)
+        
         // Core Data Path
-        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        print("Core Data Path:\n \(path)")
+//        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        print("Core Data Path:\n \(path)")
 
     }
     

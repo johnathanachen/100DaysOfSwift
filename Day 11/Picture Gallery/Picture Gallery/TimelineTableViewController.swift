@@ -7,46 +7,77 @@
 //
 
 import UIKit
+import CoreData
 
-class TimelineTableViewController: UITableViewController {
+class TimelineTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
 
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        initializeFetchedResultsController()
+    }
+    
+    // MARK: - Core Data
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>!
+    
+    func initializeFetchedResultsController() {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Entries")
+        let sortByDate = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sortByDate]
+        
+        fetchedResultsController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        fetchedResultsController.delegate = self
+        
+        do {
+            try fetchedResultsController.performFetch()
+        } catch {
+            fatalError("Failed to initialize FetchedResultsController: \(error)")
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    func configureCell(cell: UITableViewCell, indexPath: IndexPath) {
+        let entries = fetchedResultsController.object(at: indexPath) as! Entries
+        let cell = cell as! TimelineTableViewCell
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        
+        cell.entryLabel.text = entries.entry
+        
+        if let date = entries.date {
+            cell.dateLabel.text = dateFormatter.string(from: date as Date)
+        }
+        
+        if let locationString = entries.location {
+            cell.locationLabel.text = locationString
+        }
+        
+        if let selectedImage = entries.image {
+            cell.selectedImageView.image = UIImage(data: selectedImage as Data)
+        }
+        
     }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "timelineCell") as! TimelineTableViewCell
+        configureCell(cell: cell, indexPath: indexPath)
         return cell
     }
-    */
-
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return fetchedResultsController.sections!.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let sections = fetchedResultsController.sections else {
+            fatalError("No sections in fetchedResultsController")
+        }
+        
+        let sectionInfo = sections[section]
+        return sectionInfo.numberOfObjects
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
