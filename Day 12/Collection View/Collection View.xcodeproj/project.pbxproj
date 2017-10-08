@@ -13,6 +13,7 @@
 		B81059A11F8ABC95007DDDE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B810599F1F8ABC95007DDDE9 /* LaunchScreen.storyboard */; };
 		B81059A91F8ABD27007DDDE9 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81059A81F8ABD27007DDDE9 /* PhotoCollectionViewController.swift */; };
 		B81059AB1F8ABE44007DDDE9 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81059AA1F8ABE44007DDDE9 /* PhotoCollectionViewCell.swift */; };
+		B81059AD1F8ABF3A007DDDE9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81059AC1F8ABF3A007DDDE9 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B81059A21F8ABC95007DDDE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B81059A81F8ABD27007DDDE9 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		B81059AA1F8ABE44007DDDE9 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		B81059AC1F8ABF3A007DDDE9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B810599D1F8ABC95007DDDE9 /* Assets.xcassets */,
 				B810599F1F8ABC95007DDDE9 /* LaunchScreen.storyboard */,
 				B81059A21F8ABC95007DDDE9 /* Info.plist */,
+				B81059AC1F8ABF3A007DDDE9 /* Model.swift */,
 			);
 			path = "Collection View";
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 				B81059971F8ABC95007DDDE9 /* AppDelegate.swift in Sources */,
 				B81059A91F8ABD27007DDDE9 /* PhotoCollectionViewController.swift in Sources */,
 				B81059AB1F8ABE44007DDDE9 /* PhotoCollectionViewCell.swift in Sources */,
+				B81059AD1F8ABF3A007DDDE9 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
