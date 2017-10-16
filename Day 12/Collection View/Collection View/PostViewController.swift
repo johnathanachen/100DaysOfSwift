@@ -18,7 +18,7 @@ class PostViewController: UIViewController {
             let selectedRow = model.posts[indexPath.row]
             
             imageView.image = UIImage(named: model.posts[indexPath.row]["image"]!)
-            likesLabel.text = selectedRow["likes"]
+            likesLabel.text = "♥︎ \(selectedRow["likes"]!) likes"
             postLabel.text = selectedRow["description"]
             tagsLabel.text = selectedRow["tags"]
             title = selectedRow["title"]
