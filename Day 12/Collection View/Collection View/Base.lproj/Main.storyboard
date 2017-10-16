@@ -75,7 +75,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6n-Jl-QMS">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo 01" translatesAutoresizingMaskIntoConstraints="NO" id="vB5-9V-sB6">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo 01" translatesAutoresizingMaskIntoConstraints="NO" id="vB5-9V-sB6">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="375" id="wfz-hw-O34"/>
@@ -138,7 +138,11 @@
                         <viewLayoutGuide key="safeArea" id="tzK-Wk-grO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="Unl-rv-Hf3">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="button-dots" id="HrN-VH-DKc"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="button-dots" id="HrN-VH-DKc">
+                            <connections>
+                                <action selector="tapOptionsButton:" destination="SVE-JS-cFl" id="cTD-7W-fFb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="vB5-9V-sB6" id="8rI-Y6-kcX"/>
@@ -149,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-DB-yal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1408.8" y="-262.21889055472263"/>
+            <point key="canvasLocation" x="1326" y="-262"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qGL-VX-9uh">
