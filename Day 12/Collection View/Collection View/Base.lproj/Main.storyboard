@@ -44,7 +44,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="imageView" destination="s1l-w6-zPw" id="igD-Ah-D2m"/>
-                                    <segue destination="SVE-JS-cFl" kind="show" id="pGb-eB-Ipl"/>
+                                    <segue destination="SVE-JS-cFl" kind="show" identifier="segueToPostView" id="pGb-eB-Ipl"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -140,6 +140,12 @@
                     <navigationItem key="navigationItem" title="Title" id="Unl-rv-Hf3">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="button-dots" id="HrN-VH-DKc"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="vB5-9V-sB6" id="8rI-Y6-kcX"/>
+                        <outlet property="likesLabel" destination="f1E-6d-BZt" id="dpO-SO-yNZ"/>
+                        <outlet property="postLabel" destination="2IC-k9-gQx" id="34R-9g-tMO"/>
+                        <outlet property="tagsLabel" destination="TiK-Q2-pKC" id="fMy-zt-3az"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cF-DB-yal" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

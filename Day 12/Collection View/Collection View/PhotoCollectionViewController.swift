@@ -14,6 +14,7 @@ class PhotoCollectionViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
 
     // MARK: UICollectionViewDataSource
@@ -33,6 +34,17 @@ class PhotoCollectionViewController: UICollectionViewController {
         cell.imageView.image = UIImage(named: model.posts[indexPath.row]["image"]!)
     
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "segueToPostView" {
+            let postViewController = segue.destination as! PostViewController
+            
+            let cell = sender as! UICollectionViewCell
+            
+            postViewController.selectedIndex = collectionView?.indexPath(for: cell)
+        }
     }
 
 }

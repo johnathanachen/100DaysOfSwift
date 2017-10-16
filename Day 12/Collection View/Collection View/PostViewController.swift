@@ -9,27 +9,30 @@
 import UIKit
 
 class PostViewController: UIViewController {
-
+    
+    // MARK: - View Did Load
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
+        if let indexPath = selectedIndex {
+            let selectedRow = model.posts[indexPath.row]
+            
+            imageView.image = UIImage(named: model.posts[indexPath.row]["image"]!)
+            likesLabel.text = selectedRow["likes"]
+            postLabel.text = selectedRow["description"]
+            tagsLabel.text = selectedRow["tags"]
+            title = selectedRow["title"]
+        }
     }
     
+    // MARK: - Properties
+    var selectedIndex: IndexPath?
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    // MARK: - Outlets
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var likesLabel: UILabel!
+    @IBOutlet weak var postLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
+    
 
 }
